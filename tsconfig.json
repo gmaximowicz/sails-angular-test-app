@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "sourceMap": true
+  },
+  "exclude": [
+      ".tmp",
+      "node_modules",
+      "typings/globals",
+      "typings/modules"
+  ]
+}
