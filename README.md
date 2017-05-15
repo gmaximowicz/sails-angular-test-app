@@ -1,3 +1,4 @@
-# social-termometer
+# sails-angular test app with docker
 
-a [Sails](http://sailsjs.org) application
+A sample of sails + angular + docker
+based on the pack of xmaestro

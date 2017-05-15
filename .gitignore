@@ -116,4 +116,7 @@ npm-debug.log
 nbproject
 .idea
 .node_history
+.history
 typings
+assets/**/*.js
+assets/**/*.map

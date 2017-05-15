@@ -1,0 +1,32 @@
+version: "3"
+
+services:
+  api:
+    container_name : api-container
+    ports:
+      - "1337:1337"
+    volumes:
+      - "../api:/server/api"
+      - "../assets:/server/assets"
+      - "../config:/server/config"
+      - "../api/tasks:/server/tasks"
+      - "../api/views:/server/views"
+    build:
+      context: ../
+      dockerfile: ./docker/api/dockerfile
+    depends_on:
+      -mongo
+      -compiler
+    links:
+      -mongo
+  mongo:
+    image: mongo:3.4.1
+    ports:
+      - "27017:27017"
+  compiler:
+    container_name: ts_compiler
+    build:
+      context: ../
+      dockerfile: ./docker/compiler/dockerfile
+    volumes:
+      - "../assets:/server/assets"
