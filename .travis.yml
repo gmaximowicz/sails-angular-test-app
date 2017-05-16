@@ -5,8 +5,8 @@ services:
 
 env:
     global:
-        - DOCKER_VERSION=1.10.1-0~trusty
-        - DOCKER_COMPOSE_VERSION=1.6.0
+        - DOCKER_VERSION=17.03.1~ce-0~ubuntu-trusty
+        - DOCKER_COMPOSE_VERSION=1.11.2
 
 before_install:
   # list docker-engine versions
@@ -18,9 +18,9 @@ before_install:
   - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
   - chmod +x docker-compose
   - sudo mv docker-compose /usr/local/bin
-  #- cd docker
+  - cd docker
 
 script:
-  #- docker-compose build
+  - docker-compose build
   - docker version
   - docker-compose version
