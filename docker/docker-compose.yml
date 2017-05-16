@@ -14,7 +14,7 @@ services:
       - "../views:/server/views"
     build:
       context: ../
-      dockerfile: ./docker/api/dockerfile
+      dockerfile: ./docker/api/Dockerfile
     depends_on:
       - mongo
       - compiler
@@ -28,6 +28,6 @@ services:
     container_name: ts_compiler
     build:
       context: ../
-      dockerfile: ./docker/compiler/dockerfile
+      dockerfile: ./docker/compiler/Dockerfile
     volumes:
       - "../assets:/server/assets"
