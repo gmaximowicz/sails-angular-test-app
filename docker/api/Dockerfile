@@ -1,4 +1,4 @@
-FROM ubuntu:16:04
+FROM ubuntu:16.04
 
 MAINTAINER Gabriel Maximowicz "gabriel.maximowicz@gmail.com"
 
@@ -8,7 +8,7 @@ WORKDIR /server
 #copy sails files
 COPY .sailsrc /server
 COPY app.js /server
-COPY Gruntfile.json /server
+COPY Gruntfile.js /server
 
 #update for install npm and node
 RUN apt-get -qq update
@@ -30,8 +30,6 @@ COPY typings.json /server
 
 RUN npm install
 RUN typings install
-
-RUN chmod 744 startup.sh
 
 EXPOSE 1337
 

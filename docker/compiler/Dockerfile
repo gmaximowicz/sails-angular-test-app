@@ -14,4 +14,4 @@ RUN typings install
 
 VOLUME ["/server"]
 
-CMD ["npm", "run", "tsc"]
+CMD ["npm", "run", "tsc:w"]

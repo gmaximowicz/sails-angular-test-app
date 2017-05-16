@@ -1,5 +1,5 @@
 {
-  "name": "angular compiler",
+  "name": "angular-compiler",
   "private": true,
   "version": "1.0.0",
   "description": "Angular compiler test app",
@@ -26,7 +26,9 @@
   },
   "scripts": {
     "debug": "node debug app.js",
-    "start": "node app.js"
+    "start": "node app.js && concurrently \"npm run tsc:w\"",
+    "tsc": "tsc -w",
+    "tsc:w": "tsc -w"
   },
   "main": "app.js",
   "repository": {
