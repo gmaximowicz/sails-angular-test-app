@@ -20,6 +20,5 @@ before_install:
   - cd docker
 
 script:
-  - sudo /etc/init.d/mongod stop
   - docker-compose build
   - docker-compose run api mocha

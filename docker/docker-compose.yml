@@ -24,7 +24,7 @@ services:
   mongo:
     image: mongo:3.4.1
     ports:
-      - "27017:27017"
+      - "27018:27017" #host port 27017 is used in travis
   compiler:
     container_name: ts_compiler
     build:
