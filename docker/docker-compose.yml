@@ -12,6 +12,7 @@ services:
       - "../config:/server/config"
       - "../tasks:/server/tasks"
       - "../views:/server/views"
+      - "../test:/server/test"
     build:
       context: ../
       dockerfile: ./docker/api/Dockerfile

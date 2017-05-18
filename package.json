@@ -38,12 +38,15 @@
     "rxjs": "5.0.1",
     "sails": "~0.12.13",
     "sails-disk": "~0.10.9",
+    "sails-mongo": "^0.12.2",
     "systemjs": "0.19.40",
-    "zone.js": "^0.8.4"
+    "zone.js": "^0.8.4",
+    "bcrypt": "1.0.2"
   },
   "scripts": {
     "debug": "node debug app.js",
-    "start": "node app.js"
+    "start": "node app.js",
+    "test": "mocha"
   },
   "main": "app.js",
   "repository": {
@@ -52,7 +55,10 @@
   },
   "devDependencies": {
     "@types/core-js": "^0.9.41",
-    "typescript": "~2.1.0"
+    "typescript": "~2.1.0",
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "supertest": "^3.0.0"
   },
   "author": "gmaximowicz",
   "license": ""

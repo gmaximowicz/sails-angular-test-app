@@ -88,5 +88,12 @@ module.exports.connections = {
   * More adapters: https://github.com/balderdashy/sails                      *
   *                                                                          *
   ***************************************************************************/
-
+  mongoConnection: {
+    adapter: 'sails-mongo',
+    host: 'mongo',
+    port: 27017,
+    user: '',
+    password: '',
+    database: 'dev_data'
+  }
 };

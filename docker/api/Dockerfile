@@ -22,7 +22,7 @@ RUN npm install -g npm
 RUN npm install -g sails@0.12.13 grunt-cli bower pm2 npm-check-updates
 
 #angular dependencies
-RUN npm install -g typescript typings
+RUN npm install -g typescript typings mocha
 
 COPY package.json /server
 COPY tsconfig.json /server
